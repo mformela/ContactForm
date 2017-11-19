@@ -9,10 +9,10 @@ using System.Web;
 namespace ContactForm.Repository //szablon ogólny dla wszystkich repozytoriów 
 {
 
-
-    public class AbstractRepository<T> where T : class /*// typ generyczny jest taki - staje si e taki jaki mu przekażemy */
+    // za pomocą metod generycznych piszemy repozytorium, któe może być wykorzystywane dla wielu encji 
+    public class AbstractRepository<T> where T : class /*// typ generyczny jest taki - staje si e taki jaki mu przekażemy; T jest Klasą - definiujemy */ 
     {
-        public virtual void Create(T entity)
+        public virtual void Create(T entity)  // dodanie rekordu 
         {
 
             using (var context = new ApplicationDbContext())
@@ -23,7 +23,7 @@ namespace ContactForm.Repository //szablon ogólny dla wszystkich repozytoriów
         }
 
 
-        public virtual void Update(T entity)
+        public virtual void Update(T entity) 
         {
             using (var context = new ApplicationDbContext())
             {

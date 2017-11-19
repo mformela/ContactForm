@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ContactForm.Repository
 {
-    public class ContactFormRepository : AbstractRepository<Models.ContactForm> // dziedziczymy po klasie AbstractRepository - ciało jest w klasie AbstractRepository 
+    public class ContactFormRepository : AbstractRepository<Models.ContactForm> // dziedziczymy po klasie AbstractRepository - ciało jest w klasie AbstractRepository; rozszerza AbstractRepository  
     {
     }
 }
